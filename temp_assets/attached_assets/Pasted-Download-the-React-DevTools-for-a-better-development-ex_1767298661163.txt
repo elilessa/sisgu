@@ -1,0 +1,33 @@
+Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+api.ts:5 [API Config] URL do Backend configurada: https://2c27da7b-6586-4a0a-ae02-ab86ac6cd1c3-00-3jhks6uwy3iwq.picard.replit.dev
+chunk-3BH3JPMO.js?v=8befd17d:7567 MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+
+(anonymous) @ chunk-3BH3JPMO.js?v=8befd17d:7567
+deleteLegacyGridProps @ chunk-3BH3JPMO.js?v=8befd17d:7564
+Grid3 @ chunk-3BH3JPMO.js?v=8befd17d:7638
+renderWithHooks @ chunk-KZQJHDLT.js?v=8befd17d:11164
+updateForwardRef @ chunk-KZQJHDLT.js?v=8befd17d:13918
+beginWork @ chunk-KZQJHDLT.js?v=8befd17d:15504
+beginWork$1 @ chunk-KZQJHDLT.js?v=8befd17d:19273
+performUnitOfWork @ chunk-KZQJHDLT.js?v=8befd17d:18718
+workLoopSync @ chunk-KZQJHDLT.js?v=8befd17d:18657
+renderRootSync @ chunk-KZQJHDLT.js?v=8befd17d:18636
+performSyncWorkOnRoot @ chunk-KZQJHDLT.js?v=8befd17d:18395
+flushSyncCallbacks @ chunk-KZQJHDLT.js?v=8befd17d:8776
+(anonymous) @ chunk-KZQJHDLT.js?v=8befd17d:18149Understand this warning
+chunk-3BH3JPMO.js?v=8befd17d:7567 MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+(anonymous) @ chunk-3BH3JPMO.js?v=8befd17d:7567
+deleteLegacyGridProps @ chunk-3BH3JPMO.js?v=8befd17d:7564
+Grid3 @ chunk-3BH3JPMO.js?v=8befd17d:7638
+renderWithHooks @ chunk-KZQJHDLT.js?v=8befd17d:11164
+updateForwardRef @ chunk-KZQJHDLT.js?v=8befd17d:13918
+beginWork @ chunk-KZQJHDLT.js?v=8befd17d:15504
+beginWork$1 @ chunk-KZQJHDLT.js?v=8befd17d:19273
+performUnitOfWork @ chunk-KZQJHDLT.js?v=8befd17d:18718
+workLoopSync @ chunk-KZQJHDLT.js?v=8befd17d:18657
+renderRootSync @ chunk-KZQJHDLT.js?v=8befd17d:18636
+performSyncWorkOnRoot @ chunk-KZQJHDLT.js?v=8befd17d:18395
+flushSyncCallbacks @ chunk-KZQJHDLT.js?v=8befd17d:8776
+(anonymous) @ chunk-KZQJHDLT.js?v=8befd17d:18149Understand this warning
+chunk-3BH3JPMO.js?v=8befd17d:7567 MUI Grid: The `sm` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions

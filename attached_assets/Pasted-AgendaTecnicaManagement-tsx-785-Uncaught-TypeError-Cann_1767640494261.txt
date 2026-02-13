@@ -1,0 +1,53 @@
+AgendaTecnicaManagement.tsx:785 Uncaught TypeError: Cannot read properties of null (reading 'toDate')
+    at AgendaTecnicaManagement.tsx:785:83
+    at Array.map (<anonymous>)
+    at AgendaTecnicaManagement.tsx:782:50
+    at Array.map (<anonymous>)
+    at AgendaTecnicaManagement (AgendaTecnicaManagement.tsx:683:30)
+
+AgendaTecnicaManagement.tsx:597 [AgendaTecnica] 🎨 Renderizando. openDialog: false Tab: 0
+AgendaTecnicaManagement.tsx:597 [AgendaTecnica] 🎨 Renderizando. openDialog: false Tab: 0
+AgendaTecnicaManagement.tsx:785 Uncaught TypeError: Cannot read properties of null (reading 'toDate')
+    at AgendaTecnicaManagement.tsx:785:83
+    at Array.map (<anonymous>)
+    at AgendaTecnicaManagement.tsx:782:50
+    at Array.map (<anonymous>)
+    at AgendaTecnicaManagement (AgendaTecnicaManagement.tsx:683:30)
+chunk-KZQJHDLT.js?v=d36d697d:13626 The above error occurred in the <AgendaTecnicaManagement> component:
+
+    at AgendaTecnicaManagement (https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/src/pages/AgendaTecnicaManagement.tsx:60:7)
+    at div
+    at https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/node_modules/.vite/deps/chunk-3BH3JPMO.js?v=d36d697d:2422:45
+    at Box3 (https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/node_modules/.vite/deps/chunk-3BH3JPMO.js?v=d36d697d:5401:19)
+    at div
+    at https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/node_modules/.vite/deps/chunk-3BH3JPMO.js?v=d36d697d:2422:45
+    at Container3 (https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/node_modules/.vite/deps/chunk-3BH3JPMO.js?v=d36d697d:7232:19)
+    at div
+    at https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/node_modules/.vite/deps/chunk-3BH3JPMO.js?v=d36d697d:2422:45
+    at Box3 (https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/node_modules/.vite/deps/chunk-3BH3JPMO.js?v=d36d697d:5401:19)
+    at Layout (https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/src/components/Layout.tsx:24:3)
+    at Dashboard (https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/src/pages/Dashboard.tsx:43:7)
+    at RenderedRoute (https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/node_modules/.vite/deps/react-router-dom.js?v=d36d697d:6191:26)
+    at Routes (https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/node_modules/.vite/deps/react-router-dom.js?v=d36d697d:6983:3)
+    at AppContent (https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/src/App.tsx:32:7)
+    at AuthProvider (https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/src/contexts/AuthContext.tsx:33:3)
+    at RenderedRoute (https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/node_modules/.vite/deps/react-router-dom.js?v=d36d697d:6191:26)
+    at Routes (https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/node_modules/.vite/deps/react-router-dom.js?v=d36d697d:6983:3)
+    at Router (https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/node_modules/.vite/deps/react-router-dom.js?v=d36d697d:6924:13)
+    at BrowserRouter (https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/node_modules/.vite/deps/react-router-dom.js?v=d36d697d:10018:3)
+    at DefaultPropsProvider (https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/node_modules/.vite/deps/chunk-3BH3JPMO.js?v=d36d697d:6045:3)
+    at RtlProvider (https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/node_modules/.vite/deps/chunk-3BH3JPMO.js?v=d36d697d:6020:3)
+    at ThemeProvider2 (https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/node_modules/.vite/deps/chunk-3BH3JPMO.js?v=d36d697d:5981:5)
+    at ThemeProvider3 (https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/node_modules/.vite/deps/chunk-3BH3JPMO.js?v=d36d697d:6189:5)
+    at ThemeProviderNoVars (https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/node_modules/.vite/deps/chunk-Q4OBGUMQ.js?v=d36d697d:279:10)
+    at ThemeProvider (https://0e507e72-92b7-4cf9-a1d9-dcd956678072-00-2iyy94tnhar6f.spock.replit.dev/node_modules/.vite/deps/chunk-Q4OBGUMQ.js?v=d36d697d:392:3)
+    at App
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+chunk-KZQJHDLT.js?v=d36d697d:18933 Uncaught TypeError: Cannot read properties of null (reading 'toDate')
+    at AgendaTecnicaManagement.tsx:785:83
+    at Array.map (<anonymous>)
+    at AgendaTecnicaManagement.tsx:782:50
+    at Array.map (<anonymous>)
+    at AgendaTecnicaManagement (AgendaTecnicaManagement.tsx:683:30)
