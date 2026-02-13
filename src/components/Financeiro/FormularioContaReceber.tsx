@@ -44,7 +44,7 @@ export const FormularioContaReceber: React.FC<FormularioContaReceberProps> = ({
     onSuccess
 }) => {
     const { addContaReceber, updateContaReceber, loading } = useFinanceiro();
-    const [formData, setFormData] = useState<Partial<CreateContaReceberData>>({
+    const [formData, setFormData] = useState<any>({
         descricao: '',
         clienteId: '', // Idealmente seria um Autocomplete
         clienteNome: '',
@@ -112,7 +112,7 @@ export const FormularioContaReceber: React.FC<FormularioContaReceberProps> = ({
                 valorDesconto: 0,
                 // IDs falsos para protótipo, depois conectar com cadastro real
                 clienteId: formData.clienteId || 'temp_id',
-            } as CreateContaReceberData;
+            } as any;
 
             if (contaParaEditar) {
                 await updateContaReceber(contaParaEditar.id, payload);

@@ -1,5 +1,5 @@
 import { Timestamp } from 'firebase/firestore';
-import { EquipamentoContrato } from './orcamento';
+import { EquipamentoContrato } from './OrcamentoType';
 
 export interface Contrato {
     id: string;

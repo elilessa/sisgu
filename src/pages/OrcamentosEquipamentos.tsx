@@ -1735,7 +1735,7 @@ export function OrcamentosEquipamentos() {
       setSuccess(`E-mail enviado para ${emailTo} com sucesso!`);
 
       if (orcamentoParaEmail.status === 'em_elaboracao') {
-        onUpdateStatus(orcamentoParaEmail.id, 'enviado');
+        handleUpdateStatus(orcamentoParaEmail.id, 'enviado');
       }
 
       setOpenEmailDialog(false);
@@ -3114,7 +3114,7 @@ export function OrcamentosEquipamentos() {
         title="Confirmar exclusão"
         message={`Deseja realmente excluir o orçamento ${selectedOrcamento?.numero}?`}
         onConfirm={handleDelete}
-        onCancel={handleCloseDeleteDialog}
+        onClose={handleCloseDeleteDialog}
       />
 
       {/* Dialog de Envio de Email */}
