@@ -55,7 +55,7 @@ import { ActionEdit, ActionDelete, ActionSend, ActionPdf, StatusChip } from '../
 // @ts-ignore
 // import html2pdf from 'html2pdf.js';
 import { gerarCabecalhoEmpresaHTML, gerarLayoutDocumentoHTML, imprimirHTMLViaIframe } from '../utils/printUtils';
-import { Orcamento, EquipamentoContrato } from '../types/orcamento';
+import { Orcamento, EquipamentoContrato } from '../types/OrcamentoType';
 import { Contrato } from '../types/contrato';
 
 interface Cliente {
