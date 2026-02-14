@@ -7,7 +7,7 @@ import { useDashboardData } from '../hooks/useDashboardData';
 import { SummaryCard } from '../components/Dashboard/SummaryCard';
 import { TrendUp } from '../components/Icons/CustomIcons';
 
-const DashboardHome: React.FC = () => {
+const DashboardMain: React.FC = () => {
     const { userData } = useAuth();
     const [periodo, setPeriodo] = useState('mes'); // dia, semana, mes, ano
 
@@ -234,4 +234,4 @@ const DashboardHome: React.FC = () => {
     );
 };
 
-export { DashboardHome };
+export { DashboardMain };

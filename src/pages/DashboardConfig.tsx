@@ -27,7 +27,7 @@ import { ContasPagar } from './Financeiro/ContasPagar';
 import { LancamentosContabeis } from './Financeiro/LancamentosContabeis';
 import { RelatoriosHub } from './Relatorios/RelatoriosHub';
 import { RelatorioFinanceiro } from './Relatorios/RelatorioFinanceiro';
-import { DashboardHome } from './DashboardHome';
+import { DashboardMain } from './DashboardMain';
 import { Vendas } from './Financeiro/Vendas';
 
 // Definição do Tipo para as Chaves das Páginas
@@ -65,7 +65,7 @@ export type DashboardPageKey =
 
 // Mapeamento Centralizado: Chave -> Componente
 export const DASHBOARD_PAGES: Record<DashboardPageKey, React.ComponentType> = {
-    'dashboard': DashboardHome,
+    'dashboard': DashboardMain,
     'usuarios': Usuarios,
     'administradoras': Administradoras,
     'banco': Banco,
