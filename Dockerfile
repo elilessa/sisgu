@@ -24,4 +24,4 @@ ENV PORT=8080
 EXPOSE 8080
 
 # 8. Comando para iniciar
-CMD [ "node", "server.js" ]
+CMD [ "node", "server.cjs" ]
