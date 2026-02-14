@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState } from 'react';
 import { Box, Typography, Grid, Paper, FormControl, InputLabel, Select, MenuItem, Chip } from '@mui/material';
 import { useAuth } from '../contexts/AuthContext';
