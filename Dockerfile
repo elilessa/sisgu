@@ -1,6 +1,6 @@
 
 # 1. Base: Node.js 18
-FROM node:18-alpine
+FROM node:20-alpine
 
 # 2. Diretório de trabalho no container
 WORKDIR /app

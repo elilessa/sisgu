@@ -2,30 +2,50 @@ const express = require("express");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 const path = require("path");
-// const { firebaseConfigured } = require("./src/config/firebase"); // Comentado temporariamente até garantirmos que o arquivo existe localmente ou ajustar o path
+const fs = require("fs");
+
+// Global error handlers to prevent silent crashes
+process.on('uncaughtException', (err) => {
+    console.error('CRITICAL ERROR: Uncaught Exception:', err);
+    process.exit(1);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+    console.error('CRITICAL ERROR: Unhandled Rejection at:', promise, 'reason:', reason);
+    process.exit(1);
+});
 
 const app = express();
 
 app.use(cors());
 app.use(express.json({ limit: '50mb' }));
 
-// Servir arquivos estáticos do React (Frontend de Produção)
-app.use(express.static(path.join(__dirname, 'dist')));
+// Debug: Check if dist exists
+const distPath = path.join(__dirname, 'dist');
+if (!fs.existsSync(distPath)) {
+    console.error("❌ CRITICAL: Pasta 'dist' não encontrada! O build do Vite falhou ou não foi copiado corretamente.");
+} else {
+    console.log("✅ Pasta 'dist' encontrada.");
+}
 
-// Logs
+// Serve static files from React build
+app.use(express.static(distPath));
+
+// Request logging
 app.use((req, res, next) => {
     console.log(`\n[${new Date().toISOString()}] ${req.method} ${req.url}`);
     next();
 });
 
-// --- CONFIGURAÇÃO DE EMAIL (GMAIL / ZOHO / LOCAWEB) ---
-// No Google Cloud Run, usaremos Variáveis de Ambiente para isso.
-const port = Number(process.env.SMTP_PORT) || 587;
-const secure = port === 465;
+// Email Configuration
+// const { firebaseConfigured } = require("./src/config/firebase"); // Keep commented as per original
+
+const smtpPort = Number(process.env.SMTP_PORT) || 587;
+const secure = smtpPort === 465;
 
 const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST || 'smtp.locaweb.com.br',
-    port: port,
+    port: smtpPort,
     secure: secure,
     auth: {
         user: process.env.SMTP_USER,
@@ -36,12 +56,12 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-// Rota de Health Check
+// Health Check
 app.get("/api/health", (req, res) => {
     res.json({ status: "ok", timestamp: new Date().toISOString() });
 });
 
-// Rota de Envio de Orçamento
+// Send Quote Email
 app.post('/api/send-orcamento', async (req, res) => {
     const {
         to,
@@ -56,7 +76,7 @@ app.post('/api/send-orcamento', async (req, res) => {
         return res.status(400).json({ success: false, message: 'Faltando destinatário ou PDF.' });
     }
 
-    console.log(`Enviando orçamento ${numeroOrcamento} para ${to}... usando porta ${port}`);
+    console.log(`Enviando orçamento ${numeroOrcamento} para ${to}... usando porta ${smtpPort}`);
 
     const htmlContent = `
     <div style="font-family: Arial, sans-serif; color: #333; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 8px;">
@@ -101,12 +121,19 @@ app.post('/api/send-orcamento', async (req, res) => {
     }
 });
 
-// Qualquer outra rota devolve o React (SPA)
+// SPA Fallback
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+    const indexPath = path.join(distPath, 'index.html');
+    if (fs.existsSync(indexPath)) {
+        res.sendFile(indexPath);
+    } else {
+        console.error("❌ CRITICAL: index.html not found in dist folder!");
+        res.status(500).send("Internal Server Error: Build artifact missing.");
+    }
 });
 
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
+// CRITICAL: Explicitly bind to 0.0.0.0 for Cloud Run
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`✅ Servidor SisGu rodando na porta ${PORT}`);
 });
