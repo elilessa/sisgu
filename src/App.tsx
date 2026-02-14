@@ -17,6 +17,7 @@ import { Estoque } from './pages/Estoque';
 import { Calendario } from './pages/Calendario';
 import { ContasReceber } from './pages/Financeiro/ContasReceber';
 import { LancamentosContabeis } from './pages/Financeiro/LancamentosContabeis';
+/*
 import { AuvoDemo } from './pages/Demo/AuvoDemo';
 import { AuvoChamadoDemo } from './pages/Demo/AuvoChamadoDemo';
 import { AuvoClientesDemo } from './pages/Demo/AuvoClientesDemo';
@@ -30,6 +31,7 @@ import { AuvoConfigDemo } from './pages/Demo/AuvoConfigDemo';
 import { FieldControlTempoDemo } from './pages/Demo/FieldControlTempoDemo';
 import { FieldControlCalendarioDemo } from './pages/Demo/FieldControlCalendarioDemo';
 import { AuvoCalendarioDemo } from './pages/Demo/AuvoCalendarioDemo';
+*/
 import { FluxoCaixa } from './pages/Financeiro/FluxoCaixa';
 import { ContasPagar } from './pages/Financeiro/ContasPagar';
 import { Boletos } from './pages/Financeiro/Boletos';
@@ -77,6 +79,7 @@ function AppContent() {
       <Route path="/financeiro/contas-pagar" element={<ContasPagar />} />
       <Route path="/financeiro/fluxo-caixa" element={<FluxoCaixa />} />
       <Route path="/financeiro/lancamentos" element={<LancamentosContabeis />} />
+      {/*
       <Route path="/auvo-demo" element={<AuvoDemo />} />
       <Route path="/auvo-chamado" element={<AuvoChamadoDemo />} />
       <Route path="/auvo-clientes" element={<AuvoClientesDemo />} />
@@ -90,6 +93,7 @@ function AppContent() {
       <Route path="/auvo-calendario" element={<AuvoCalendarioDemo />} />
       <Route path="/fieldcontrol-tempo" element={<FieldControlTempoDemo />} />
       <Route path="/fieldcontrol-calendario" element={<FieldControlCalendarioDemo />} />
+      */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );

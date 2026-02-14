@@ -215,7 +215,7 @@ export function FluxoCaixa() {
 
             snapshot.forEach(docSnap => {
                 const data = docSnap.data();
-                const mov = { id: docSnap.id, ...data } as MovimentacaoCaixa;
+                const mov = { id: docSnap.id, ...(data as any) } as MovimentacaoCaixa;
                 movs.push(mov);
 
                 if (mov.tipo === 'entrada' || mov.tipo === 'suprimento') {
