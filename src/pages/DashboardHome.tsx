@@ -59,7 +59,7 @@ const DashboardHome: React.FC = () => {
                     <Typography variant="h6" color="text.secondary">Chamados Técnicos</Typography>
                 </Box>
                 <Grid container spacing={2}>
-                    <Grid item xs={12} sm={6} md={3} lg={2}>
+                    <Grid xs={12} sm={6} md={3} lg={2}>
                         <SummaryCard
                             title="Total Chamados"
                             value={data.chamados.total}
@@ -67,7 +67,7 @@ const DashboardHome: React.FC = () => {
                             color="#555"
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6} md={3} lg={2}>
+                    <Grid xs={12} sm={6} md={3} lg={2}>
                         <SummaryCard
                             title="Em Aberto"
                             value={data.chamados.abertos}
@@ -76,7 +76,7 @@ const DashboardHome: React.FC = () => {
                             color="#EF4444"
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6} md={3} lg={2}>
+                    <Grid xs={12} sm={6} md={3} lg={2}>
                         <SummaryCard
                             title="Em Andamento"
                             value={data.chamados.emAndamento}
@@ -85,7 +85,7 @@ const DashboardHome: React.FC = () => {
                             color="#3B82F6"
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6} md={3} lg={2}>
+                    <Grid xs={12} sm={6} md={3} lg={2}>
                         <SummaryCard
                             title="Concluídos"
                             value={data.chamados.concluidos}
@@ -104,7 +104,7 @@ const DashboardHome: React.FC = () => {
                     <Typography variant="h6" color="text.secondary">Comercial</Typography>
                 </Box>
                 <Grid container spacing={2}>
-                    <Grid item xs={12} sm={6} md={4} lg={3}>
+                    <Grid xs={12} sm={6} md={4} lg={3}>
                         <SummaryCard
                             title="Pipeline Total"
                             value={formatCurrency(data.comercial.valorTotalPipeline)}
@@ -113,7 +113,7 @@ const DashboardHome: React.FC = () => {
                             color="#8B5CF6"
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={2}>
+                    <Grid xs={12} sm={6} md={4} lg={2}>
                         <SummaryCard
                             title="Em Elaboração"
                             value={data.comercial.emElaboracao}
@@ -122,7 +122,7 @@ const DashboardHome: React.FC = () => {
                             color="#3B82F6"
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={2}>
+                    <Grid xs={12} sm={6} md={4} lg={2}>
                         <SummaryCard
                             title="Enviados"
                             value={data.comercial.enviados}
@@ -131,7 +131,7 @@ const DashboardHome: React.FC = () => {
                             color="#F59E0B"
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4} lg={2}>
+                    <Grid xs={12} sm={6} md={4} lg={2}>
                         <SummaryCard
                             title="Aprovados"
                             value={data.comercial.aprovados}
@@ -151,7 +151,7 @@ const DashboardHome: React.FC = () => {
                     <Typography variant="h6" color="text.secondary">Contratos (Base Total)</Typography>
                 </Box>
                 <Grid container spacing={2}>
-                    <Grid item xs={12} sm={6} md={4} lg={3}>
+                    <Grid xs={12} sm={6} md={4} lg={3}>
                         <SummaryCard
                             title="Receita Recorrente (MRR)"
                             value={formatCurrency(data.contratos.valorTotal)}
@@ -160,7 +160,7 @@ const DashboardHome: React.FC = () => {
                             color="#0EA5E9"
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6} md={3} lg={2}>
+                    <Grid xs={12} sm={6} md={3} lg={2}>
                         <SummaryCard
                             title="Ativos"
                             value={data.contratos.ativos}
@@ -169,7 +169,7 @@ const DashboardHome: React.FC = () => {
                             color="#10B981"
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6} md={3} lg={2}>
+                    <Grid xs={12} sm={6} md={3} lg={2}>
                         <SummaryCard
                             title="Suspensos"
                             value={data.contratos.suspensos}
@@ -179,7 +179,7 @@ const DashboardHome: React.FC = () => {
                         />
                     </Grid>
                     {/* Chips Internos de Peças (Conforme Sugestão) e COMODATO */}
-                    <Grid item xs={12} sm={6} md={4} lg={3}>
+                    <Grid xs={12} sm={6} md={4} lg={3}>
                         <Paper elevation={2} sx={{ p: 2, height: '100%', borderLeft: '4px solid #6366F1' }}>
                             <Typography variant="body2" color="text.secondary" fontWeight="bold">MODALIDADES</Typography>
                             <Box mt={2} display="flex" gap={1} flexWrap="wrap">
@@ -200,7 +200,7 @@ const DashboardHome: React.FC = () => {
                     <Typography variant="h6" color="text.secondary">Financeiro ({periodo === 'mes' ? 'Este Mês' : periodo})</Typography>
                 </Box>
                 <Grid container spacing={2}>
-                    <Grid item xs={12} sm={6} md={6} lg={3}>
+                    <Grid xs={12} sm={6} md={6} lg={3}>
                         <SummaryCard
                             title="Receita Realizada"
                             value={formatCurrency(data.financeiro.receitaRealizada)}
@@ -210,7 +210,7 @@ const DashboardHome: React.FC = () => {
                             color="#10B981"
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6} md={6} lg={3}>
+                    <Grid xs={12} sm={6} md={6} lg={3}>
                         <SummaryCard
                             title="Despesa Realizada"
                             value={formatCurrency(data.financeiro.despesaRealizada)}
@@ -220,7 +220,7 @@ const DashboardHome: React.FC = () => {
                             color="#EF4444"
                         />
                     </Grid>
-                    <Grid item xs={12} sm={12} md={12} lg={6}>
+                    <Grid xs={12} sm={12} md={12} lg={6}>
                         <Paper elevation={2} sx={{ p: 2, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: '#F8FAFC' }}>
                             <Typography variant="body2" color="text.secondary" fontStyle="italic">
                                 [O Gráfico de Fluxo de Caixa Anual proposto entraria aqui]
